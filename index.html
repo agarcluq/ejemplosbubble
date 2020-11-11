@@ -1,0 +1,51 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script src="script.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+	<h1 id="tittle">Hello there!</h1>
+	<p>Hola jeje</p>
+	
+	<button id= "boton" >Clic aquí </button>
+
+
+	<div id="wrapper1"><span class="uno">CAPA 1</span>
+		<div id="wrapper2"><span>CAPA 2</span>
+			<div id="wrapper3"><span>CAPA 3</span>
+			</div>
+		</div>
+	</div>
+	<h2 id="text">Cambiate</h2>
+<a href="/me.html">My other page</a><br/><br/>
+	<script>
+		window.addEventListener("load", onLoad);
+
+function onLoad() {
+const wrapper1=document.getElementById("wrapper1");
+const wrapper2=document.getElementById("wrapper2");
+const wrapper3=document.getElementById("wrapper3");
+
+const link=document.querySelector('a');
+link.addEventListener("click",onClick,false);
+
+wrapper1.addEventListener("click",onClick,false);
+wrapper2.addEventListener("click",onClick,false);
+wrapper3.addEventListener("click",onClick,false);
+
+}
+
+function onClick(e){
+
+//e.stopPropagation(); //si comento esto añado funcionalidad prevent
+e.preventDefault();
+//alert(this.firstChild.textContent); //si comento esto añado funcionalidad prevent
+
+}
+	</script>
+</body>
+
+</html>
